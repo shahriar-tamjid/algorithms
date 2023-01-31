@@ -1,6 +1,4 @@
-#  Created by Elshad Karimov on 3/17/20.
-#  Copyright © 2020 Elshad Karimov. All rights reserved.
-
+#  Time Complexity
 
 array = [1, 2, 3, 4, 5]
 

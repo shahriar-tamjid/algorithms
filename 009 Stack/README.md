@@ -12,7 +12,6 @@ Stacks have various applications in computer science, such as:
 - Undo/redo functionality in text editors and image processing software
 - Implementing backtracking algorithms, such as depth-first search
 <br>
-<br>
 
 ### Working Principle of this Code
 This implementation defines a stack of maximum size `MAXSIZE` and initializes the top index `top` to `-1`. The code provides five functions to operate on the stack:

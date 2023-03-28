@@ -11,32 +11,7 @@ Stacks have various applications in computer science, such as:
 - Memory management in compilers and operating systems
 - Undo/redo functionality in text editors and image processing software
 - Implementing backtracking algorithms, such as depth-first search
-<br>
 
-### Working Principle of this Code
-This implementation defines a stack of maximum size `MAXSIZE` and initializes the top index `top` to `-1`. The code provides five functions to operate on the stack:
-
-- `isEmpty()`: checks if the stack is empty
-- `isFull()`: checks if the stack is full
-- `peek()`: gets the element at the top of the stack
-- `pop()`: removes an element from the top of the stack
-- `push()`: adds an element to the top of the stack
-
-The `createStack()` function allows the user to create a stack based on their input. It prompts the user to enter the number of elements they want to push into the stack and then prompts them to enter each element. If the number of elements entered by the user exceeds the maximum stack size, an error message is displayed.
-
-The `printStack()` function prints all the elements in the stack, starting from the top.
-
-In the `main()` function, a menu-driven approach is used to allow the user to perform the following operations:
-
-1. Create stack
-2. Print stack
-3. Push element into stack
-4. Pop element from stack
-5. Exit program
-
-The program will keep running until the user chooses to exit.
-<br>
-<br>
 
 ### Code Explanation
 

@@ -4,49 +4,6 @@
 int stack[MAXSIZE];
 int top = -1;
 
-// function to check if stack is empty
-int isEmpty() {
-    if(top == -1)
-        return 1;
-    else
-        return 0;
-}
-
-// function to check if stack is full
-int isFull() {
-    if(top == MAXSIZE)
-        return 1;
-    else
-        return 0;
-}
-
-// function to get the element at the top of stack
-int peek() {
-    return stack[top];
-}
-
-// function to remove an element from the top of stack
-int pop() {
-    int data;
-    if(!isEmpty()) {
-        data = stack[top];
-        top = top - 1;
-        return data;
-    } else {
-        printf("Could not retrieve data, Stack is empty.\n");
-    }
-}
-
-// function to add an element to the top of stack
-int push(int data) {
-    if(!isFull()) {
-        top = top + 1;
-        stack[top] = data;
-    } else {
-        printf("Could not insert data, Stack is full.\n");
-    }
-}
-
 // function to create the stack based on user input
 void createStack() {
     int n, data;
@@ -63,6 +20,22 @@ void createStack() {
     }
 }
 
+// function to check if stack is empty
+int isEmpty() {
+    if(top == -1)
+        return 1;
+    else
+        return 0;
+}
+
+// function to check if stack is full
+int isFull() {
+    if(top == MAXSIZE)
+        return 1;
+    else
+        return 0;
+}
+
 // function to print the elements in the stack
 void printStack() {
     if(isEmpty()) {
@@ -71,14 +44,35 @@ void printStack() {
     }
     printf("Elements in the stack: ");
     for(int i = top; i >= 0; i--) {
-        printf("%d ", stack[i]);
+        printf("=> %d ", stack[i]);
     }
-    printf("\n");
+}
+
+// function to add an element to the top of stack
+int push(int data) {
+    if(!isFull()) {
+        top = top + 1;
+        stack[top] = data;
+    } else {
+        printf("Could not insert data, Stack is full.\n");
+    }
+}
+
+// function to remove an element from the top of stack
+int pop() {
+    int data;
+    if(!isEmpty()) {
+        data = stack[top];
+        top = top - 1;
+        return data;
+    } else {
+        printf("Could not retrieve data, Stack is empty.\n");
+    }
 }
 
 int main() {
     int choice, data;
-    printf("\nWelcome to the Stack Program!\n");
+    printf("\n========== Stack Operations ==========\n");
     do {
         printf("\nMenu:\n");
         printf("1. Create stack\n");
@@ -100,6 +94,7 @@ int main() {
                 printf("Enter element to be pushed: ");
                 scanf("%d", &data);
                 push(data);
+                printf("\n");
                 break;
             case 4:
                 data = pop();

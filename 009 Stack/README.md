@@ -1,7 +1,6 @@
 ## Stack
 This is a simple implementation of a stack in C language. A stack is a linear data structure that follows the Last-In-First-Out (LIFO) principle, i.e., the element that is inserted last will be the first one to be removed. This implementation provides various functionalities like creating a stack, pushing an element into the stack, popping an element from the stack, and printing the elements in the stack.
-<br>
-<br>
+
 
 ### Use cases of Stack
 Stacks have various applications in computer science, such as:
